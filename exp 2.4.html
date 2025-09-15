@@ -1,0 +1,25 @@
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  // State to control visibility
+  const [showMessage, setShowMessage] = useState(false);
+
+  // Function to toggle visibility
+  const toggleMessage = () => {
+    setShowMessage(!showMessage);
+  }
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <button onClick={toggleMessage}>
+        {showMessage ? "Hide Message" : "Show Message"}
+      </button>
+
+      {/* Conditional rendering */}
+      {showMessage && <h2>Hello! This message is conditionally rendered.</h2>}
+    </div>
+  );
+}
+
+export default App;

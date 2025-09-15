@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  // State to store message
+  const [message, setMessage] = useState("Click a button!");
+
+  // Functions to handle button clicks
+  const handleClick1 = () => {
+    setMessage("You clicked Button 1!");
+  }
+
+  const handleClick2 = () => {
+    setMessage("You clicked Button 2!");
+  }
+
+  const handleClick3 = () => {
+    setMessage("You clicked Button 3!");
+  }
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>{message}</h1>
+      <button onClick={handleClick1}>Button 1</button>
+      <button onClick={handleClick2} style={{ marginLeft: '10px' }}>Button 2</button>
+      <button onClick={handleClick3} style={{ marginLeft: '10px' }}>Button 3</button>
+    </div>
+  );
+}
+
+export default App;
